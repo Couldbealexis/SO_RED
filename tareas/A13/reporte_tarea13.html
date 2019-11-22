@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Sistemas Operativos de Red</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom Fonts -->
+	<link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+		rel="stylesheet" type="text/css">
+	<link href="../../vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="../../css/stylish-portfolio.css" rel="stylesheet">
+</head>
+
+<body style='background-color:#F8F9FA'>
+
+	<div style="background-color: #f2bd1b;">
+		<h1 style='text-align:center;' class="mb-1"><strong>Actividad 13</strong> </h1>
+		<h2 style='text-align:center;' class="mb-2">Instalar samba en windows y linux y configurar para compartir, carpetas,
+			archivos e impresoras.</h2>
+		<h4 style='text-align:center;' class="mb-4">César Alexis Gutiérrez González</h4>
+		<a href="../../portafolio.html" style="text-align:center;">Volver</a>
+		<br>
+	</div>
+
+	<center>
+		<h3>Instalando samba en linux para compartir recursos con windows</h3>
+		<h4>Paso 1</h4>
+		<p><img src="./img/samba1.png" alt="Instalar samba" style="width:800px;height:400px;">
+		</p>
+		<p>
+			Instalamos samba desde la terminal de Ubuntu con el comando:<br>
+			<p style="color: red">sudo apt-get install samba-common samba</p>
+		</p>
+
+		<h4>Paso 2</h4>
+		<p><img src="./img/samba2.png" alt="Instalar samba" style="width:700px;height:400px;">
+		</p>
+		<p>
+			Ahora nos posicionamos dentro del directorio samba, con el comando: <p style="color: red">cd etc/samba/</p><br>
+			Despues abrimos para modificar el archivo smb.conf, con el comando: <p style="color: red">sudo nano smb.conf</p>
+		</p>
+
+		<h4>Paso 3</h4>
+		<p><img src="./img/samba3.png" alt="Instalar samba" style="width:500px;height:300px;">
+		</p>
+		<p>
+			Dentro del archivo a modificar, nos posicionamos en [homes] (es la carpeta del sistema en donde compartiremos
+			archivos)<br>
+			descomentamos las tres lineas siguientes y activamos el browseable=yes.
+		</p>
+
+		<h4>Paso 4</h4>
+		<p><img src="./img/samba4.png" alt="Instalar samba" style="width:500px;height:300px;">
+		</p>
+		<p>
+			Ahora creamos un usuario para poder acceder a la carpeta compartida, con el comando:<br>
+			<p style="color: red ">sudo smbpasswd -a javier</p>
+			<p>Despues de registrar el usuario iniciamos el servidor de samba con el comando:</p>
+			<p style="color: red">sudo service smb restart</p>
+		</p>
+
+		<h4>Paso 5</h4>
+		<p><img src="./img/samba5.png" alt="Instalar samba" style="width:400px;height:400px;">
+		</p>
+		<p>
+			Ahora desde nuestra pc con Windows entramos a la siguiente ruta, la cual nos pedira el usuario y contrasena.
+			<p style="color: red">\nombre_servidor\usuario_creado</p>
+			<p>Y nos mostrara la carpeta para compartir archivos.</p>
+		</p>
+
+		<h4>Paso 6</h4>
+		<p><img src="./img/samba6.png" alt="Instalar samba" style="width:900px;height:400px;">
+		</p>
+		<p>
+			Ahora desde nuestra pc con Windows entramos la carpeta homes/escritorio y vemos los archivos que tiene Ubuntu en
+			el escritorio.
+		</p>
+		<p><img src="./img/samba7.png" alt="Instalar samba" style="width:900px;height:400px;">
+
+			<h4>Paso 7</h4>
+			<p><img src="./img/samba8.png" alt="Instalar samba" style="width:900px;height:400px;">
+			</p>
+			<p>
+				Ahora desde nuestra pc con Windows tenemos una carpeta llamada samba,intentamos pegarla en el escritorio de
+				Ubuntu, desde la carpeta home, pero nos marca error por que no tenemos los permisos para hacer eso.
+			</p>
+				<h4>Paso 8</h4>
+				<p><img src="./img/samba10.png" alt="Instalar samba" style="width:900px;height:400px;">
+				</p>
+				<p>
+					Nos vamos de nuevo al archivo smb.conf del paso 2 y debajo de las lines agregamos lo siguiente:
+				</p>
+				<p style="color: red">readonly=no</p>
+
+				<h4>Paso 9</h4>
+				<p><img src="./img/samba11.png" alt="Instalar samba" style="width:900px;height:400px;">
+				</p>
+				<p>
+					De nuevo intentamos pegar la carpeta de samba desde windows al escritorio de Ubuntu por medio de la carpeta
+					homes<br>
+					Y esta vez no hubo problemas para lograrlo
+				</p>
+
+
+
+	</center>
+	<a href="../../portafolio.html" style="text-align: center;">Volver</a>
+	<!-- Bootstrap core JavaScript -->
+	<script src="../../vendor/jquery/jquery.min.js"></script>
+	<script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<script src="../../js/stylish-portfolio.js"></script>
+
+</body>
+
+</html>

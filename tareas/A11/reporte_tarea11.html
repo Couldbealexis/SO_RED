@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sistemas Operativos de Red</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+    rel="stylesheet" type="text/css">
+  <link href="../../vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="../../css/stylish-portfolio.css" rel="stylesheet">
+</head>
+
+<body style='background-color:#F8F9FA'>
+
+  <div style="background-color: #f2bd1b;">
+    <h1 style='text-align:center;' class="mb-1"><strong>Actividad 11</strong> </h1>
+    <h2 style='text-align:center;' class="mb-2">Instalar linux Server e configurar 10 usuarios, configurar 4 grupos de
+      usuarios.</h2>
+    <h4 style='text-align:center;' class="mb-4">César Alexis Gutiérrez González</h4>
+    <a href="../../portafolio.html" style="text-align:center;">Volver</a>
+    <br>
+  </div>
+
+  <center>
+    <h4>Paso 1</h4>
+    <p><img src="./img/us1.jpeg" alt="iso" style="width:400px;height:400px;">
+    </p>
+    <p>
+      Descargamos el ISO de Ubuntu Server.
+    </p>
+
+    <h4>Paso 2</h4>
+    <p><img src="./img/us2.1.jpg" alt="Instalador" style="width:500px;height:400px;">
+    </p>
+    <p>
+      Damos enter en la opcion "Instalar Ubuntu Server".
+    </p>
+
+    <h4>Paso 3</h4>
+    <p><img src="./img/us2.jpeg" alt="Instalador" style="width:700px;height:400px;">
+    </p>
+    <p>
+      Ya en el instalador seleccionamos el idioma en el cual se instalara.
+    </p>
+
+    <h4>Paso 4</h4>
+    <p><img src="./img/us3.jpeg" alt="Instalador" style="width:500px;height:300px;">
+    </p>
+    <p>
+      Configuramos el usuario de Ubuntu Server.
+    </p>
+
+    <h4>Paso 5</h4>
+    <p><img src="./img/us4.jpeg" alt="Instalador" style="width:550px;height:300px;">
+    </p>
+    <p>
+      Seleccionamos los componentes que se instalaran en nuestro sistema "Ubuntu Server".
+    </p>
+
+    <h4>Paso 6</h4>
+    <p><img src="./img/us5.jpeg" alt="Instalador" style="width:550px;height:300px;">
+    </p>
+    <p>
+      Esperamos a que se instale "Ubuntu Server".
+    </p>
+
+    <h4>Paso 7</h4>
+    <p><img src="./img/us6.jpeg" alt="Instalador" style="width:550px;height:300px;">
+    </p>
+    <p>
+      Al finalizar la instalacion, reiniciamos el sistema.
+    </p>
+
+    <h4>Paso 8</h4>
+    <p><img src="./img/us7.jpeg" alt="Instalador" style="width:550px;height:300px;">
+    </p>
+    <p>
+      Quitamos el medio de "donde" se instalo Ubuntu Server.
+    </p>
+
+    <h4>Paso 9</h4>
+    <p><img src="./img/us8.jpeg" alt="Instalador" style="width:550px;height:300px;">
+    </p>
+    <p>
+      Esperamos a que se inicien todas las funciones de nuestro sistema.
+    </p>
+
+    <h3>Registro de usuarios y grupos en Ubuntu Server</h3>
+
+    <h4>Paso 1</h4>
+    <p><img src="./img/us9.jpeg" alt="Usuarios-Grupos" style="width:550px;height:300px;">
+    </p>
+    <p>
+      Creamos un usuario con el comando:<br>
+      <p style="color: red">sudo adduser nombre_usuario</p>
+    </p>
+
+    <h4>Paso 2</h4>
+    <p><img src="./img/us10.jpeg" alt="Usuarios-Grupos" style="width:550px;height:300px;">
+    </p>
+    <p>
+      Mostramos los usuarios creados con el comando:<br>
+      <p style="color: red">cat /etc/passwd </p>
+    </p>
+
+    <h4>Paso 3</h4>
+    <p><img src="./img/us11.jpeg" alt="Usuarios-Grupos" style="width:650px;height:300px;">
+    </p>
+    <p>
+      Creamos los grupos con el comando:<br>
+      <p style="color: red">sudo groupadd nombre_grupo</p>
+    </p>
+
+    <h4>Paso 4</h4>
+    <p><img src="./img/us12.jpeg" alt="Usuarios-Grupos" style="width:650px;height:300px;">
+    </p>
+    <p>
+      Mostramos los grupos creados con el comando:<br>
+      <p style="color: red">cat /etc/group</p>
+    </p>
+
+    <h4>Paso 5</h4>
+    <p><img src="./img/us13.jpeg" alt="Usuarios-Grupos" style="width:650px;height:300px;">
+    </p>
+    <p>
+      Ahora agregamos usuarios a los grupos existentes con el comando:<br>
+      <p style="color: red">sudo usermod -a -G nombre_grupo nombre_usuario</p>
+    </p>
+
+    <h4>Paso 6</h4>
+    <p><img src="./img/us14.jpeg" alt="Usuarios-Grupos" style="width:650px;height:300px;">
+    </p>
+    <p>
+      Mostramos los usuarios que existen en cada grupo con el comando:<br>
+      <p style="color: red">getent group nombre_grupo</p>
+    </p>
+  </center>
+  <a href="../../portafolio.html" style="text-align: center;">Volver</a>
+  <!-- Bootstrap core JavaScript -->
+  <script src="../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <script src="../../js/stylish-portfolio.js"></script>
+
+</body>
+
+</html>
